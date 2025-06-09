@@ -1,7 +1,7 @@
 #include<stdio.h>
 
 int main()
-{ //León Carrizo Nuñez
+{ //Leon Carrizo Nuñez
     float altura;
     float peso; 
     float imc;
@@ -11,7 +11,24 @@ int main()
      printf("Ingrese su peso en kg: \n");
       scanf(" %f",&peso);
      imc = peso / (altura * altura);
-     printf("Su índice de masa corporal es: %f \n\n", imc);
-     printf("‭Índice| Condición‬\n-----------------------------‬\n<18.5 | Bajo peso‬\n18.5 a 24.9 | Normal‬\n25.0 a 29.9 | Sobrepeso‬\n>=30| Obesidad\n");
+     printf("Su indice de masa corporal es: %f \n\n", imc);
+     printf("‭Indice| Condicion‬\n-----------------------------‬\n<18.5 | Bajo peso‬\n18.5 a 24.9 | Normal‬\n25.0 a 29.9 | Sobrepeso‬\n>=30| Obesidad\n");
+    
+	if (imc >= 30)
+	{
+		printf("Su condicion es: Obesidad");
+	}
+	else if (imc < 30 && imc >= 25)
+	{
+		printf("Su condicion es: Sobrepeso");
+	}
+	else if (imc < 25 && imc >= 18.5)
+	{
+		printf("Su condicion es: Normal");
+	}
+	else
+	{
+		printf("Su condicion es: Bajo peso");
+	}
     return 0;
 }
